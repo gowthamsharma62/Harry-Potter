@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hogwarts Magical Gallery | Wizard's World</title>
+  
+  <!-- Magical Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=MedievalSharp&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <!-- Background Music -->
+  <audio id="bgMusic" loop preload="auto">
+    <source src="/audio/background-music.mp3" type="audio/mpeg">
+    <source src="/audio/background-music.mp3" type="audio/mp3">
+  </audio>
+  
+  <!-- Music Toggle Button -->
+  <button id="musicToggle" class="music-toggle" aria-label="Toggle Music">
+    <span class="music-icon music-on">🎵</span>
+    <span class="music-icon music-off">🔇</span>
+    <span class="music-waves">
+      <span class="wave"></span>
+      <span class="wave"></span>
+      <span class="wave"></span>
+    </span>
+  </button>
+  
+  <!-- Tile Pattern Background -->
+  <div class="tile-background"></div>
+  
+  <!-- Rain Effect Container -->
+  <div id="rain-container" class="rain-active"></div>
+  
+  <!-- Lightning Storm Effect -->
+  <div id="storm-container">
+    <div class="storm-clouds"></div>
+    <div class="storm-clouds-layer2"></div>
+    <div class="storm-clouds-layer3"></div>
+    <div class="lightning-flash"></div>
+    <div class="thunder-glow"></div>
+    <!-- Lightning bolts will be generated dynamically -->
+  </div>
+  
+  <!-- Magical Particles -->
+  <div id="particles-container"></div>
+  
+  <!-- Floating Candles -->
+  <div id="candles-container"></div>
+
+  <!-- Navigation Bar - Harry Potter Pill Style -->
+  <nav class="navbar">
+    <!-- Logo on Left -->
+    <div class="navbar-logo">
+      <img src="/images/navbar-logo.png" alt="Harry Potter Logo" class="nav-logo-img">
+    </div>
+    
+    <!-- Navigation Pill -->
+    <div class="navbar-pill">
+      <ul class="navbar-menu">
+        <li><a href="#home" class="nav-link active" data-section="home">
+          <span class="nav-text">Home</span>
+          <span class="nav-snitch">⚡</span>
+        </a></li>
+        <li><a href="#gallery" class="nav-link" data-section="gallery">
+          <span class="nav-text">Gallery</span>
+        </a></li>
+        <li><a href="#upload" class="nav-link" data-section="upload">
+          <span class="nav-text">Upload</span>
+        </a></li>
+        <li><a href="#videos" class="nav-link" data-section="videos">
+          <span class="nav-text">Clips</span>
+        </a></li>
+        <li><a href="#spells" class="nav-link" data-section="spells">
+          <span class="nav-text">Spells</span>
+        </a></li>
+        <li><a href="#about" class="nav-link" data-section="about">
+          <span class="nav-text">Hogwarts</span>
+        </a></li>
+      </ul>
+    </div>
+    
+    <button class="navbar-toggle" aria-label="Toggle Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    
+    <!-- Home Section -->
+    <section id="home" class="section section-home active">
+      <!-- Video Background - Home Page Only -->
+      <div class="video-background" id="homeVideo">
+        <video autoplay muted loop playsinline preload="auto" id="bgVideo">
+          <source src="/video/background.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+      </div>
+      
+      <!-- Decorative Harry Potter Stickers -->
+      <div class="hp-decorations">
+        <!-- Decoration 1 - Top Left -->
+        <div class="hp-decoration hp-decor-1">
+          <img src="/images/decorations/decor1.png" alt="Harry Potter Decoration">
+        </div>
+        
+        <!-- Decoration 2 - Top Right -->
+        <div class="hp-decoration hp-decor-2">
+          <img src="/images/decorations/decor2.png" alt="Harry Potter Decoration">
+        </div>
+        
+        <!-- Decoration 3 - Left Middle -->
+        <div class="hp-decoration hp-decor-3">
+          <img src="/images/decorations/decor3.png" alt="Harry Potter Decoration">
+        </div>
+        
+        <!-- Decoration 4 - Right Middle -->
+        <div class="hp-decoration hp-decor-4">
+          <img src="/images/decorations/decor4.png" alt="Harry Potter Decoration">
+        </div>
+        
+        <!-- Decoration 5 - Bottom Left -->
+        <div class="hp-decoration hp-decor-5">
+          <img src="/images/decorations/decor5.png" alt="Harry Potter Decoration">
+        </div>
+        
+        <!-- Decoration 6 - Bottom Right -->
+        <div class="hp-decoration hp-decor-6">
+          <img src="/images/decorations/decor6.png" alt="Harry Potter Decoration">
+        </div>
+      </div>
+      
+      <div class="hero">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            <span class="title-line">Welcome to the</span>
+            <span class="title-main">Wizard's World</span>
+          </h1>
+          <p class="hero-subtitle">
+            A magical collection of enchanted images from the Wizarding World. 
+            Store your memories in our mystical gallery, protected by ancient spells.
+          </p>
+          <div class="hero-buttons">
+            <a href="#gallery" class="btn btn-primary" data-section="gallery">
+              <span class="btn-glow"></span>
+              Explore Gallery
+            </a>
+            <a href="#upload" class="btn btn-secondary" data-section="upload">
+              <span class="btn-glow"></span>
+              Add to Archive
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Magical Portrait Cards -->
+      <div class="hanging-boxes-container">
+        <!-- Card 1: Enchanted Gallery -->
+        <div class="hanging-box" onclick="navigateToSection('gallery')">
+          <div class="corner-ornament top-left"></div>
+          <div class="corner-ornament top-right"></div>
+          <div class="corner-ornament bottom-left"></div>
+          <div class="corner-ornament bottom-right"></div>
+          <div class="image-glow"></div>
+          <img 
+            src="https://images.unsplash.com/photo-1505832018823-50331d70d237?q=80&w=600&auto=format&fit=crop" 
+            alt="Magical Library" 
+            class="hanging-box-image"
+          >
+          <div class="hanging-box-content">
+            <h3 class="hanging-box-title">Enchanted Gallery</h3>
+            <p class="hanging-box-text">Browse magical portraits and mystical memories from the Wizarding World archives.</p>
+          </div>
+        </div>
+        
+        <!-- Card 2: Wizard's Archive -->
+        <div class="hanging-box" onclick="navigateToSection('upload')">
+          <div class="corner-ornament top-left"></div>
+          <div class="corner-ornament top-right"></div>
+          <div class="corner-ornament bottom-left"></div>
+          <div class="corner-ornament bottom-right"></div>
+          <div class="image-glow"></div>
+          <img 
+            src="https://images.unsplash.com/photo-1515816052601-210d5501d471?q=80&w=600&auto=format&fit=crop" 
+            alt="Ancient Scrolls" 
+            class="hanging-box-image"
+          >
+          <div class="hanging-box-content">
+            <h3 class="hanging-box-title">Wizard's Archive</h3>
+            <p class="hanging-box-text">Store your magical moments safely within our enchanted preservation chambers.</p>
+          </div>
+        </div>
+        
+        <!-- Card 3: Magical Effects -->
+        <div class="hanging-box" onclick="navigateToSection('spells')">
+          <div class="corner-ornament top-left"></div>
+          <div class="corner-ornament top-right"></div>
+          <div class="corner-ornament bottom-left"></div>
+          <div class="corner-ornament bottom-right"></div>
+          <div class="image-glow"></div>
+          <img 
+            src="https://images.unsplash.com/photo-1475353152807-97f4e3315977?q=80&w=600&auto=format&fit=crop" 
+            alt="Magical Castle" 
+            class="hanging-box-image"
+          >
+          <div class="hanging-box-content">
+            <h3 class="hanging-box-title">Magical Effects</h3>
+            <p class="hanging-box-text">Cast enchantments upon the gallery with atmospheric rain, candles, and sparkles.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section section-gallery">
+      <div class="section-header">
+        <h2 class="section-title">The Enchanted Gallery</h2>
+        <p class="section-description">Behold the magical portraits and memories preserved within these ancient walls</p>
+        
+        <div class="gallery-controls">
+          <div class="sort-controls">
+            <label class="sort-label">Sort by:</label>
+            <select id="sortSelect" class="magical-select">
+              <option value="date-desc">Newest First</option>
+              <option value="date-asc">Oldest First</option>
+              <option value="size-desc">Largest First</option>
+              <option value="size-asc">Smallest First</option>
+            </select>
+          </div>
+          <div class="gallery-stats">
+            <span id="imageCount">0</span> magical images
+          </div>
+        </div>
+      </div>
+      
+      <div id="gallery-grid" class="gallery-grid">
+        <!-- Images will be loaded here -->
+      </div>
+      
+      <div id="gallery-empty" class="gallery-empty hidden">
+        <div class="empty-icon">📜</div>
+        <h3>The Archive is Empty</h3>
+        <p>No magical images have been stored yet. Be the first wizard to add one!</p>
+        <a href="#upload" class="btn btn-primary" data-section="upload">Add First Image</a>
+      </div>
+      
+      <div id="gallery-loading" class="gallery-loading hidden">
+        <div class="loading-spinner"></div>
+        <p>Summoning images...</p>
+      </div>
+    </section>
+
+    <!-- Upload Section -->
+    <section id="upload" class="section section-upload">
+      <div class="section-header">
+        <h2 class="section-title">Wizard's Archive</h2>
+        <p class="section-description">Add new magical images to the enchanted collection</p>
+      </div>
+      
+      <div class="upload-container">
+        <!-- File Upload -->
+        <div class="upload-card">
+          <div class="upload-card-header">
+            <span class="upload-icon">📁</span>
+            <h3>Upload from Device</h3>
+          </div>
+          <div class="upload-dropzone" id="dropzone">
+            <div class="dropzone-content">
+              <div class="dropzone-icon">✨</div>
+              <p class="dropzone-text">Drag & drop your magical images here</p>
+              <p class="dropzone-subtext">or click to browse</p>
+              <p class="dropzone-formats">JPG, PNG, WEBP • Max 10MB per file • Multiple files allowed</p>
+            </div>
+            <input type="file" id="fileInput" accept=".jpg,.jpeg,.png,.webp" multiple hidden>
+          </div>
+          
+          <!-- Storage Info -->
+          <div id="storageInfo" class="storage-info">
+            <div class="storage-bar">
+              <div class="storage-used" id="storageUsed"></div>
+            </div>
+            <p class="storage-text">
+              <span id="storageUsedText">0 MB</span> / 1 GB used
+            </p>
+          </div>
+          <div id="uploadPreview" class="upload-preview hidden">
+            <div id="previewGrid" class="preview-grid">
+              <!-- Preview thumbnails will be added here -->
+            </div>
+            <div class="preview-summary">
+              <span id="previewCount">0 files selected</span>
+              <span id="previewTotalSize">0 MB</span>
+            </div>
+            <button id="clearPreview" class="btn-clear">✕ Clear All</button>
+          </div>
+          <button id="uploadBtn" class="btn btn-primary btn-upload" disabled>
+            <span class="btn-glow"></span>
+            Cast Upload Spell
+          </button>
+        </div>
+
+        <!-- URL Upload -->
+        <div class="upload-card">
+          <div class="upload-card-header">
+            <span class="upload-icon">🔗</span>
+            <h3>Add from URL</h3>
+          </div>
+          <div class="url-form">
+            <div class="form-group">
+              <label for="imageUrl">Image URL</label>
+              <input type="url" id="imageUrl" class="magical-input" placeholder="https://example.com/magical-image.jpg">
+            </div>
+            <div class="form-group">
+              <label for="imageName">Image Name (Optional)</label>
+              <input type="text" id="imageName" class="magical-input" placeholder="Hogwarts at Sunset">
+            </div>
+            <button id="addUrlBtn" class="btn btn-primary btn-upload">
+              <span class="btn-glow"></span>
+              Summon Image
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <div id="uploadStatus" class="upload-status hidden"></div>
+    </section>
+
+    <!-- Videos Section -->
+    <section id="videos" class="section section-videos">
+      <div class="section-header">
+        <h2 class="section-title">The Pensieve Theatre</h2>
+        <p class="section-description">Behold magical memories captured in motion - relive the wizarding world's greatest moments</p>
+        
+        <div class="video-gallery-controls">
+          <div class="video-stats">
+            <span id="videoCount">0</span> magical recordings
+          </div>
+        </div>
+      </div>
+      
+      <!-- Video Upload Card -->
+      <div class="video-upload-container">
+        <div class="video-upload-card">
+          <div class="upload-card-header">
+            <span class="upload-icon">🎬</span>
+            <h3>Archive a Memory</h3>
+          </div>
+          <div class="video-upload-dropzone" id="videoDropzone">
+            <div class="dropzone-content">
+              <div class="dropzone-icon">🎞️</div>
+              <p class="dropzone-text">Drag & drop your magical recordings here</p>
+              <p class="dropzone-subtext">or click to browse</p>
+              <p class="dropzone-formats">MP4, WebM, OGG • Max 100MB per video</p>
+            </div>
+            <input type="file" id="videoFileInput" accept=".mp4,.webm,.ogg,video/mp4,video/webm,video/ogg" multiple hidden>
+          </div>
+          
+          <div id="videoUploadPreview" class="video-upload-preview hidden">
+            <div id="videoPreviewGrid" class="video-preview-grid">
+              <!-- Preview thumbnails will be added here -->
+            </div>
+            <div class="preview-summary">
+              <span id="videoPreviewCount">0 videos selected</span>
+              <span id="videoPreviewTotalSize">0 MB</span>
+            </div>
+            <button id="clearVideoPreview" class="btn-clear">✕ Clear All</button>
+          </div>
+          
+          <button id="videoUploadBtn" class="btn btn-primary btn-upload" disabled>
+            <span class="btn-glow"></span>
+            Store in Pensieve
+          </button>
+          
+          <div id="videoUploadStatus" class="upload-status hidden"></div>
+        </div>
+      </div>
+      
+      <!-- Video Gallery Grid -->
+      <div id="video-gallery-grid" class="video-gallery-grid">
+        <!-- Videos will be loaded here -->
+      </div>
+      
+      <div id="video-gallery-empty" class="gallery-empty hidden">
+        <div class="empty-icon">🎬</div>
+        <h3>The Pensieve is Empty</h3>
+        <p>No magical recordings have been stored yet. Be the first wizard to add one!</p>
+      </div>
+      
+      <div id="video-gallery-loading" class="gallery-loading hidden">
+        <div class="loading-spinner"></div>
+        <p>Summoning memories...</p>
+      </div>
+    </section>
+
+    <!-- Video Fullscreen Modal -->
+    <div id="videoLightbox" class="video-lightbox">
+      <div class="video-lightbox-overlay"></div>
+      
+      <!-- Control Buttons -->
+      <div class="video-lightbox-controls">
+        <button class="video-fullscreen-btn" id="videoFullscreenBtn" aria-label="Full Screen" title="Enter Full Screen">
+          ⛶
+        </button>
+      </div>
+      <button class="video-lightbox-close" aria-label="Close" title="Close Video">✕</button>
+      
+      <div class="video-lightbox-content">
+        <div class="video-lightbox-container">
+          <video id="fullscreenVideo" controls playsinline preload="auto">
+            <source src="" type="video/mp4">
+          </video>
+        </div>
+        <div class="video-lightbox-info">
+          <h3 id="videoLightboxTitle"></h3>
+          <div class="video-lightbox-meta">
+            <span id="videoLightboxDate"></span>
+            <span id="videoLightboxSize"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Spells Section -->
+    <section id="spells" class="section section-spells">
+      <div class="section-header">
+        <h2 class="section-title">Magical Effects</h2>
+        <p class="section-description">Control the enchantments of this mystical gallery</p>
+      </div>
+      
+      <div class="spells-grid">
+        <div class="spell-card">
+          <div class="spell-icon">🌧️</div>
+          <h3>Atmospheric Rain</h3>
+          <p>Toggle the enchanted rainfall effect</p>
+          <label class="toggle-switch">
+            <input type="checkbox" id="toggleRain" checked>
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+        
+        <div class="spell-card">
+          <div class="spell-icon">✨</div>
+          <h3>Magical Particles</h3>
+          <p>Floating dust and sparkles</p>
+          <label class="toggle-switch">
+            <input type="checkbox" id="toggleParticles" checked>
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+        
+        <div class="spell-card">
+          <div class="spell-icon">🕯️</div>
+          <h3>Floating Candles</h3>
+          <p>Enchanted candlelight ambience</p>
+          <label class="toggle-switch">
+            <input type="checkbox" id="toggleCandles" checked>
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+        
+        <div class="spell-card">
+          <div class="spell-icon">🌟</div>
+          <h3>Golden Glow</h3>
+          <p>Hover glow on gallery images</p>
+          <label class="toggle-switch">
+            <input type="checkbox" id="toggleGlow" checked>
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+        
+        <div class="spell-card">
+          <div class="spell-icon">🔮</div>
+          <h3>Spell Animations</h3>
+          <p>Magical transitions and effects</p>
+          <label class="toggle-switch">
+            <input type="checkbox" id="toggleAnimations" checked>
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+        
+        <div class="spell-card">
+          <div class="spell-icon">🌙</div>
+          <h3>Night Mode</h3>
+          <p>Deeper darkness for ambience</p>
+          <label class="toggle-switch">
+            <input type="checkbox" id="toggleNight">
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+        
+        <div class="spell-card">
+          <div class="spell-icon">⚡</div>
+          <h3>Lightning Storm</h3>
+          <p>Dramatic thunder and lightning</p>
+          <label class="toggle-switch">
+            <input type="checkbox" id="toggleStorm" checked>
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section section-about">
+      <div class="section-header">
+        <h2 class="section-title">About Hogwarts Gallery</h2>
+        <p class="section-description">The story behind this magical archive</p>
+      </div>
+      
+      <div class="about-content">
+        <div class="about-card">
+          <div class="about-scroll">
+            <h3>⚡ The Wizard's Archive</h3>
+            <p>
+              Deep within the ancient walls of Hogwarts lies a secret chamber known only to a select few. 
+              This mystical gallery houses enchanted portraits and magical memories, preserved through 
+              powerful preservation spells cast by the greatest witches and wizards of our time.
+            </p>
+            <p>
+              Each image stored within these walls carries the essence of its moment—the laughter, 
+              the tears, the triumphs, and the adventures. Like the moving portraits that grace 
+              Hogwarts' corridors, these images hold fragments of magic, waiting to share their 
+              stories with those who seek them.
+            </p>
+            <p>
+              Whether you're a seasoned Auror documenting dark artifacts, a Herbology professor 
+              cataloging magical plants, or simply a young witch or wizard capturing memories of 
+              your Hogwarts years—this archive welcomes all who respect the sanctity of magical imagery.
+            </p>
+          </div>
+        </div>
+        
+        <div class="about-features">
+          <div class="feature-item">
+            <span class="feature-icon">🖼️</span>
+            <h4>Enchanted Storage</h4>
+            <p>Images preserved with ancient spells</p>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">🔒</span>
+            <h4>Secure Archive</h4>
+            <p>Protected by magical barriers</p>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">⚡</span>
+            <h4>Lightning Fast</h4>
+            <p>Optimized for instant summoning</p>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">📱</span>
+            <h4>Responsive Magic</h4>
+            <p>Works on all magical devices</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Fullscreen Modal -->
+  <div id="lightbox" class="lightbox">
+    <div class="lightbox-overlay"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" aria-label="Close">✕</button>
+      <button class="lightbox-nav lightbox-prev" aria-label="Previous">❮</button>
+      <button class="lightbox-nav lightbox-next" aria-label="Next">❯</button>
+      <div class="lightbox-image-container">
+        <img id="lightboxImage" src="" alt="">
+        <div class="lightbox-loading">
+          <div class="loading-spinner"></div>
+        </div>
+      </div>
+      <div class="lightbox-info">
+        <h3 id="lightboxTitle"></h3>
+        <div class="lightbox-meta">
+          <span id="lightboxDate"></span>
+          <span id="lightboxSize"></span>
+          <span id="lightboxSource"></span>
+        </div>
+      </div>
+      <div class="spell-flash"></div>
+    </div>
+  </div>
+
+  <!-- Toast Notifications -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <script src="/js/rain.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>
+

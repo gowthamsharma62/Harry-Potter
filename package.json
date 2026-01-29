@@ -1,0 +1,21 @@
+{
+  "name": "hogwarts-magical-gallery",
+  "version": "1.0.0",
+  "description": "A Harry Potter-themed magical image gallery application",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "multer": "^1.4.5-lts.1",
+    "uuid": "^9.0.0"
+  },
+  "keywords": ["harry-potter", "gallery", "magical", "hogwarts"],
+  "author": "Wizard Developer",
+  "license": "MIT"
+}
+
+
+

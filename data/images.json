@@ -1,0 +1,194 @@
+[
+  {
+    "id": "hp-001",
+    "fileName": "Harry Potter - The Boy Who Lived",
+    "storedName": null,
+    "fileSize": 0,
+    "mimeType": "image/jpeg",
+    "uploadedAt": "2026-01-28T18:30:00.000Z",
+    "source": "unsplash",
+    "url": "https://images.unsplash.com/photo-1551269901-5c5e14c25df7?w=1920&q=80",
+    "isExternal": true
+  },
+  {
+    "id": "hp-002",
+    "fileName": "Hermione Granger - The Brightest Witch",
+    "storedName": null,
+    "fileSize": 0,
+    "mimeType": "image/jpeg",
+    "uploadedAt": "2026-01-28T17:45:00.000Z",
+    "source": "unsplash",
+    "url": "https://images.unsplash.com/photo-1533154683836-84ea7a0bc310?w=1920&q=80",
+    "isExternal": true
+  },
+  {
+    "id": "hp-003",
+    "fileName": "Ron Weasley - The Loyal Friend",
+    "storedName": null,
+    "fileSize": 0,
+    "mimeType": "image/jpeg",
+    "uploadedAt": "2026-01-28T16:20:00.000Z",
+    "source": "unsplash",
+    "url": "https://images.unsplash.com/photo-1448375240586-882707db888b?w=1920&q=80",
+    "isExternal": true
+  },
+  {
+    "id": "hp-004",
+    "fileName": "Albus Dumbledore - The Greatest Wizard",
+    "storedName": null,
+    "fileSize": 0,
+    "mimeType": "image/jpeg",
+    "uploadedAt": "2026-01-28T15:00:00.000Z",
+    "source": "unsplash",
+    "url": "https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=1920&q=80",
+    "isExternal": true
+  },
+  {
+    "id": "hp-005",
+    "fileName": "Severus Snape - The Half-Blood Prince",
+    "storedName": null,
+    "fileSize": 0,
+    "mimeType": "image/jpeg",
+    "uploadedAt": "2026-01-28T14:30:00.000Z",
+    "source": "unsplash",
+    "url": "https://images.unsplash.com/photo-1548248823-ce16a73b6d49?w=1920&q=80",
+    "isExternal": true
+  },
+  {
+    "id": "hp-006",
+    "fileName": "Sirius Black - The Godfather",
+    "storedName": null,
+    "fileSize": 0,
+    "mimeType": "image/jpeg",
+    "uploadedAt": "2026-01-28T13:15:00.000Z",
+    "source": "unsplash",
+    "url": "https://images.unsplash.com/photo-1485470733090-0aae1788d5af?w=1920&q=80",
+    "isExternal": true
+  },
+  {
+    "id": "hp-007",
+    "fileName": "Draco Malfoy - The Slytherin Prince",
+    "storedName": null,
+    "fileSize": 0,
+    "mimeType": "image/jpeg",
+    "uploadedAt": "2026-01-28T12:00:00.000Z",
+    "source": "unsplash",
+    "url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=80",
+    "isExternal": true
+  },
+  {
+    "id": "hp-008",
+    "fileName": "Neville Longbottom - The Brave Hero",
+    "storedName": null,
+    "fileSize": 0,
+    "mimeType": "image/jpeg",
+    "uploadedAt": "2026-01-28T11:30:00.000Z",
+    "source": "unsplash",
+    "url": "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?w=1920&q=80",
+    "isExternal": true
+  },
+  {
+    "id": "hp-009",
+    "fileName": "Luna Lovegood - The Dreamer",
+    "storedName": null,
+    "fileSize": 0,
+    "mimeType": "image/jpeg",
+    "uploadedAt": "2026-01-28T10:45:00.000Z",
+    "source": "unsplash",
+    "url": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=1920&q=80",
+    "isExternal": true
+  },
+  {
+    "id": "hp-010",
+    "fileName": "Rubeus Hagrid - Keeper of Keys",
+    "storedName": null,
+    "fileSize": 0,
+    "mimeType": "image/jpeg",
+    "uploadedAt": "2026-01-28T09:00:00.000Z",
+    "source": "unsplash",
+    "url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80",
+    "isExternal": true
+  },
+  {
+    "id": "hp-011",
+    "fileName": "Lord Voldemort - The Dark Lord",
+    "storedName": null,
+    "fileSize": 0,
+    "mimeType": "image/jpeg",
+    "uploadedAt": "2026-01-27T22:00:00.000Z",
+    "source": "unsplash",
+    "url": "https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?w=1920&q=80",
+    "isExternal": true
+  },
+  {
+    "id": "hp-012",
+    "fileName": "Minerva McGonagall - Head of Gryffindor",
+    "storedName": null,
+    "fileSize": 0,
+    "mimeType": "image/jpeg",
+    "uploadedAt": "2026-01-27T20:30:00.000Z",
+    "source": "unsplash",
+    "url": "https://images.unsplash.com/photo-1526243741027-444d633d7365?w=1920&q=80",
+    "isExternal": true
+  },
+  {
+    "id": "f68a69d0-242e-4212-b783-b4f3d5faaa80",
+    "fileName": "Fred & George Weasley - The Pranksters",
+    "storedName": "5a086d98-2adb-41c3-b430-426422c5a029.jpg",
+    "fileSize": 267560,
+    "mimeType": "image/jpeg",
+    "uploadedAt": "2026-01-29T08:52:41.714Z",
+    "source": "upload",
+    "url": "/uploads/5a086d98-2adb-41c3-b430-426422c5a029.jpg"
+  },
+  {
+    "id": "710f85dc-ebf4-4fad-bb44-72c21dbf1074",
+    "fileName": "Remus Lupin - The Werewolf",
+    "storedName": "475bee8c-bb30-4761-8c7f-c339d2e0f9e5.jpg",
+    "fileSize": 125621,
+    "mimeType": "image/jpeg",
+    "uploadedAt": "2026-01-29T08:52:41.714Z",
+    "source": "upload",
+    "url": "/uploads/475bee8c-bb30-4761-8c7f-c339d2e0f9e5.jpg"
+  },
+  {
+    "id": "c4644892-200b-4975-bd3e-4234ac7a53ac",
+    "fileName": "Dobby - The Free Elf",
+    "storedName": "02ac02cf-ebeb-42f2-b766-916f234eb899.jpg",
+    "fileSize": 254388,
+    "mimeType": "image/jpeg",
+    "uploadedAt": "2026-01-29T08:52:41.714Z",
+    "source": "upload",
+    "url": "/uploads/02ac02cf-ebeb-42f2-b766-916f234eb899.jpg"
+  },
+  {
+    "id": "bafddc68-4272-4cff-930b-a502fdfd6241",
+    "fileName": "Bellatrix Lestrange - The Death Eater",
+    "storedName": "20bc43b2-73e2-4ab4-a67f-e0088df05dc3.jpg",
+    "fileSize": 254388,
+    "mimeType": "image/jpeg",
+    "uploadedAt": "2026-01-29T08:52:41.714Z",
+    "source": "upload",
+    "url": "/uploads/20bc43b2-73e2-4ab4-a67f-e0088df05dc3.jpg"
+  },
+  {
+    "id": "3de57ce3-bb73-4625-aed4-eb429aaa9d16",
+    "fileName": "The Daily Prophet - Wizarding News",
+    "storedName": "4cc35cb2-2d11-44d1-bc4d-73f9f1d9ee86.jpg",
+    "fileSize": 251669,
+    "mimeType": "image/jpeg",
+    "uploadedAt": "2026-01-29T08:52:41.714Z",
+    "source": "upload",
+    "url": "/uploads/4cc35cb2-2d11-44d1-bc4d-73f9f1d9ee86.jpg"
+  },
+  {
+    "id": "dfb99256-750f-4da4-a7cd-30251c56c02d",
+    "fileName": "Dumbledore & Harry - Mentor and Student",
+    "storedName": "cea1b247-3642-494f-a2b6-463afad52f09.jpg",
+    "fileSize": 71075,
+    "mimeType": "image/jpeg",
+    "uploadedAt": "2026-01-29T08:52:41.714Z",
+    "source": "upload",
+    "url": "/uploads/cea1b247-3642-494f-a2b6-463afad52f09.jpg"
+  }
+]
